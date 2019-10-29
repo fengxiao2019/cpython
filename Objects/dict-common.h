@@ -11,6 +11,9 @@ typedef struct {
 /* dict_lookup_func() returns index of entry which can be used like DK_ENTRIES(dk)[index].
  * -1 when no entry found, -3 when compare raises error.
  */
+/* 函数指针
+   -1 表示没有找到 -3 表示异常
+*/
 typedef Py_ssize_t (*dict_lookup_func)
     (PyDictObject *mp, PyObject *key, Py_hash_t hash, PyObject **value_addr);
 
